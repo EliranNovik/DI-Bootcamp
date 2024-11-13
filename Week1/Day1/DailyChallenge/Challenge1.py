@@ -47,4 +47,3 @@ else:
     print("You are tall enough to ride!")
 else:
     print("Sorry, you need to grow some more to ride.")
-
