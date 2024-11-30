@@ -1,3 +1,6 @@
+#Exercise 1 – Random Sentence Generator
+
+
 def get_words_from_file():
     try:
         with open('sowpods.txt', 'r') as file:
@@ -73,4 +76,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
 
