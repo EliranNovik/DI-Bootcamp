@@ -14,7 +14,7 @@ def get_words_from_file():
 import random
 
 def get_random_sentence(length):
-    words = get_words_from_file() 
+    words = get_words_from_file()
     if not words:
         return "Error: No words available to create a sentence."
     
