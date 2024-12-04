@@ -13,8 +13,6 @@ class Circle:
     def set_diameter(self, value):
         if value > 0:
             self.radius = value / 2
-        else:
-            raise ValueError("Diameter must be greater than zero.")
 
     def get_area(self):
         return math.pi * (self.radius ** 2)
@@ -37,8 +35,6 @@ class Circle:
     def __gt__(self, other):
         if isinstance(other, Circle):
             return self.radius > other.radius
-
-
 
 c1 = Circle(radius=8)
 c2 = Circle(diameter=15)
