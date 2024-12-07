@@ -103,4 +103,82 @@ print(f' Zaras clients are men, women, children')
 
 brand['county_creation'] = 'Spain'
 
+if "international_competitors" in brand:
+    brand["international_competitors"].append("Desigual")
+
+del brand["creation_date"]
+
+print(f"The last international competitor is: {brand['international_competitors'][-1]}")
+
+print(f"The major clothes colors in the US are: {', '.join(brand['major_color']['US'])}.")
+
+print(f"The dictionary has {len(brand)} key-value pairs.")
+
+print(f"The keys in the dictionary are: {list(brand.keys())}")
+
+more_on_zara = {
+    "creation_date": 1975,
+    "number_stores": 10000
+}
+
+brand.update(more_on_zara)
+
+print(f"The number of stores is: {brand['number_stores']}")
+
+
+
+#Exercise 4 : Disney characters
+#Instructions
+#Use this list :
+
+#users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+#Analyse these results :
+
+#1/
+
+#>>> print(disney_users_A)
+#{"Mickey": 0, "Minnie": 1, "Donald": 2, "Ariel": 3, "Pluto": 4}
+
+#2/
+
+#>>> print(disney_users_B)
+#{0: "Mickey",1: "Minnie", 2: "Donald", 3: "Ariel", 4: "Pluto"}
+
+#3/ 
+
+#>>> print(disney_users_C)
+#{"Ariel": 0, "Donald": 1, "Mickey": 2, "Minnie": 3, "Pluto": 4}
+
+
+#Use a for loop to recreate the 1st result. Tip : don’t hardcode the numbers.
+#Use a for loop to recreate the 2nd result. Tip : don’t hardcode the numbers.
+#Use a method to recreate the 3rd result. Hint: The 3rd result is sorted alphabetically.
+#Only recreate the 1st result for:
+#The characters, which names contain the letter “i”.
+#The characters, which names start with the letter “m” or “p”.
+
+
+
+users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
+
+# 1. 
+disney_users_A = {user: index for index, user in enumerate(users)}
+print("disney_users_A:", disney_users_A)
+
+# 2. 
+disney_users_B = {index: user for index, user in enumerate(users)}
+print("disney_users_B:", disney_users_B)
+
+# 3. 
+disney_users_C = {user: index for index, user in enumerate(sorted(users))}
+print("disney_users_C:", disney_users_C)
+
+# 4. 
+disney_users_I = {user: index for index, user in enumerate(users) if "i" in user.lower()}
+print("disney_users_I:", disney_users_I)
+
+# 5. 
+disney_users_MP = {user: index for index, user in enumerate(users) if user[0].lower() in ["m", "p"]}
+print("disney_users_MP:", disney_users_MP)
+
 
