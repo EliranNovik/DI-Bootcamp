@@ -8,14 +8,14 @@ class MenuItem:
     def save(self):
         try:
             connection = psycopg2.connect(
-                dbname='menues',
+                dbname='EXERCISE_DB',
                 user='postgres',
                 password='',
                 host='localhost',
                 port='5432'
             )
             cursor = connection.cursor()
-            query = "INSERT INTO Menu_Items (name, price) VALUES (%s, %s);"
+            query = "INSERT INTO Menu_items (name, price) VALUES (%s, %s);"
             cursor.execute(query, (self.name, self.price))
             connection.commit()
             print("Item saved successfully!")
@@ -34,7 +34,7 @@ class MenuItem:
                 port='5432'
             )
             cursor = connection.cursor()
-            query = "DELETE FROM Menu_Items WHERE name = %s;"
+            query = "DELETE FROM Menu_items WHERE name = %s;"
             cursor.execute(query, (self.name,))
             connection.commit()
             print("Item deleted successfully!")
@@ -53,7 +53,7 @@ class MenuItem:
                 port='5432'
             )
             cursor = connection.cursor()
-            query = "UPDATE Menu_Items SET name = %s, price = %s WHERE name = %s;"
+            query = "UPDATE Menu_items SET name = %s, price = %s WHERE name = %s;"
             cursor.execute(query, (new_name, new_price, self.name))
             connection.commit()
             print("Item updated successfully!")

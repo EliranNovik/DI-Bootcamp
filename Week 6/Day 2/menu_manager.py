@@ -12,7 +12,7 @@ class MenuManager:
                 port='5432'
             )
             cursor = connection.cursor()
-            query = "SELECT * FROM Menu_Items WHERE name = %s;"
+            query = "SELECT * FROM Menu_items WHERE name = %s;"
             cursor.execute(query, (name,))
             result = cursor.fetchone()
             if result:
@@ -29,13 +29,12 @@ class MenuManager:
         try:
             connection = psycopg2.connect(
                 dbname='menues',
-                user='postgres',
                 password='',
                 host='localhost',
                 port='5432'
             )
             cursor = connection.cursor()
-            query = "SELECT * FROM Menu_Items;"
+            query = "SELECT * FROM Menu_items;"
             cursor.execute(query)
             results = cursor.fetchall()
             return [{'name': item[0], 'price': item[1]} for item in results]
