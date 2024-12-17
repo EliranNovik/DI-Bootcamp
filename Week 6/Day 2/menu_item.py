@@ -8,7 +8,7 @@ class MenuItem:
     def save(self):
         try:
             connection = psycopg2.connect(
-                dbname='EXERCISE_DB',
+                dbname='menues',
                 user='postgres',
                 password='',
                 host='localhost',
