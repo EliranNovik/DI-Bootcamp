@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .palette {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .color {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .color:hover {
+    border: 2px solid #333;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(40, 40px);
+    grid-template-rows: repeat(40, 40px);
+    justify-content: center;
+    gap: 2px;
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  #clear-btn {
+    margin: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: bold;
+  }

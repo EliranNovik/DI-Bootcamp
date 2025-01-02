@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  #taskInput {
+    width: 200px;
+    padding: 8px;
+  }
+  
+  .listTasks {
+    max-width: 400px;
+    margin: 0 auto 20px;
+    text-align: left;
+  }
+  
+  /* Container for each task */
+  .taskItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0f0f0;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Left side: checkbox + label */
+  .taskContent {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .taskContent input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .taskLabel {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  /* When checked, text is crossed out in red */
+  .completed {
+    text-decoration: line-through;
+    color: red;
+  }
+  
+  /* The remove button (red X) */
+  .removeBtn {
+    background: none;
+    border: none;
+    color: #d00;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  #clearAllBtn {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
