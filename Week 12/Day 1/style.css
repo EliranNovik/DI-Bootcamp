@@ -1,0 +1,41 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #efeff4;
+    text-align: center;
+    margin: 100px;
+    font-size: 20px;
+
+  background-image: url('background4.jpg');
+  background-size: cover;
+  background-position: all;
+  background-repeat: no-repeat;
+}
+  button {
+    padding: 10px 20px;
+    background-color: #f5f1f1;
+    color: rgb(15, 14, 14);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #ac2d2d;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #loading {
+    margin: 60px 0;
+    font-size: 40px;
+    color: #fbfafa;
+  }
+  
+  #error {
+    color: rgb(247, 76, 76);
+    margin: 20px 0;
+  }
+  
+  
